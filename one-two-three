@@ -1,0 +1,51 @@
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import java.util.Scanner;
+/**
+ *
+ * @author mostafa
+ */
+public class OneTwoThree {
+    
+    public static void main(String[] args){
+        Scanner  sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        for(int i=0;i<num;i++){
+       String name=sc.next();
+       if(name.length() == 3 &&(name.startsWith("o")||name.endsWith("e") )&& ((ishere(name,'o') &&ishere(name,'n'))||(ishere(name,'e') &&ishere(name,'n'))||(ishere(name,'o') &&ishere(name,'e')))){
+       System.out.println("1");
+       }else  if(name.length() == 3 && ((ishere(name,'t') &&ishere(name,'w'))||(ishere(name,'w') &&ishere(name,'o'))||(ishere(name,'o') &&ishere(name,'t')))){
+       System.out.println("2");
+       }else  if(name.length() == 5 && ((ishere(name,'e') &&ishere(name,'i')&&ishere(name,'g')&&ishere(name,'h'))||(ishere(name,'e') &&ishere(name,'i')&&ishere(name,'g')&&ishere(name,'t'))||(ishere(name,'e') &&ishere(name,'i')&&ishere(name,'t')&&ishere(name,'h'))||(ishere(name,'e') &&ishere(name,'t')&&ishere(name,'g')&&ishere(name,'h'))||(ishere(name,'i') &&ishere(name,'t')&&ishere(name,'g')&&ishere(name,'h')))){
+       System.out.println("8");
+       }else  if(name.length() == 5 && ((ishere(name,'t') &&ishere(name,'h')&&ishere(name,'r'))||((ishere(name,'t') &&ishere(name,'h')&&ishere(name,'e')))||(ishere(name,'t') &&ishere(name,'r')&&ishere(name,'e'))||(ishere(name,'r') &&ishere(name,'h')&&ishere(name,'e')))){
+       System.out.println("3");
+       }else if(name.length() == 4 && ((ishere(name,'f') &&ishere(name,'o')&&ishere(name,'u'))||(ishere(name,'f') &&ishere(name,'o')&&ishere(name,'r'))||(ishere(name,'f') &&ishere(name,'u')&&ishere(name,'r'))||(ishere(name,'o') &&ishere(name,'u')&&ishere(name,'r')))){
+       System.out.println("4");
+       }else if(name.length() == 4 && ((ishere(name,'f') &&ishere(name,'i')&&ishere(name,'v'))||(ishere(name,'f') &&ishere(name,'i')&&ishere(name,'e'))||(ishere(name,'f') &&ishere(name,'v')&&ishere(name,'e'))||(ishere(name,'i') &&ishere(name,'v')&&ishere(name,'e')))){
+       System.out.println("5");
+       }else  if(name.length() == 3 && ((ishere(name,'s') &&ishere(name,'i'))||(ishere(name,'s') &&ishere(name,'x'))||(ishere(name,'i') &&ishere(name,'x')))){
+       System.out.println("6");
+       }else  if(name.length() == 5 && ((ishere(name,'s') &&ishere(name,'v')&&ishere(name,'n'))||((ishere(name,'s') &&ishere(name,'v')&&ishere(name,'e')))||(ishere(name,'s') &&ishere(name,'e')&&ishere(name,'n'))||(ishere(name,'v') &&ishere(name,'n')&&ishere(name,'e')))){
+       System.out.println("7");
+       }else if(name.length() == 4 && ((ishere(name,'n') &&ishere(name,'i')&&ishere(name,'e'))||(ishere(name,'i') &&ishere(name,'n')&&ishere(name,'e'))||(ishere(name,'n') &&ishere(name,'i'))||(ishere(name,'n') &&ishere(name,'e')))){
+       System.out.println("9");
+       }else if(name.length() == 3 &&(name.startsWith("t")||name.endsWith("n") )&& ((ishere(name,'t') &&ishere(name,'n'))||(ishere(name,'e') &&ishere(name,'n'))||(ishere(name,'t') &&ishere(name,'e')))){
+       System.out.println("10");
+       }
+        }
+    }
+    
+    public static boolean ishere(String name,char ch){
+        for(int i=0;i<name.length();i++){
+            if(name.charAt(i)==ch){
+            return true;
+            }
+        }
+        return false;
+    }
+}
