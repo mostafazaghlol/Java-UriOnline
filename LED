@@ -1,0 +1,37 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package urionline;
+import java.util.Scanner;
+/**
+ *
+ * @author mostafa
+ */
+public class LED {
+        public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int num1=sc.nextInt();
+        for(int j=0;j<num1;j++){
+        String num=sc.next();
+        int count=0;
+        for(int i=0;i<num.length();i++){
+            if(num.charAt(i)=='1'){
+                count=count+2;
+            }else if(num.charAt(i)=='2'||num.charAt(i)=='3'||num.charAt(i)=='5'){
+                count=count+5;
+            }else if(num.charAt(i)=='4'){
+                count+=4;
+            }else if(num.charAt(i)=='6'||num.charAt(i)=='9'||num.charAt(i)=='0'){
+                count+=6;
+            }else if(num.charAt(i)=='7'){
+                count+=3;
+            }else if(num.charAt(i)=='8'){
+                count+=7;
+            }
+        }
+        System.out.format("%d leds%n", count);
+        }
+        }
+}
